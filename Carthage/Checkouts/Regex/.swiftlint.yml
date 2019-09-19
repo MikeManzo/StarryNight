@@ -4,5 +4,11 @@ disabled_rules:
 excluded:
   - .build
   - Carthage
+  - Tests/*/XCTestManifests.swift
+identifier_name:
+  excluded:
+    - _result
+nesting:
+  type_level: 2
 trailing_comma:
   mandatory_comma: true

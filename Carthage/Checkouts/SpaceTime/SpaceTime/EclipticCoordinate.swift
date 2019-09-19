@@ -58,7 +58,7 @@ public extension EquatorialCoordinate {
     /// - Parameters:
     ///   - coord: The equatorial coordinate.
     ///   - julianDay: The julian day.
-    public init(EclipticCoordinate coord: EclipticCoordinate, julianDay: JulianDay) {
+    init(EclipticCoordinate coord: EclipticCoordinate, julianDay: JulianDay) {
         // TODO: support precession
         precondition(julianDay == coord.julianDay, "only conversion from ecliptical to equatorial coordinate of the same equinox is supported")
         let ε = EclipticUtil.obliquityOfEcliptic(julianDay: julianDay)

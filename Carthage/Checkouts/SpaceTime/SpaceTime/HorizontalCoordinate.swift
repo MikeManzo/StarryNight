@@ -61,7 +61,7 @@ public extension EquatorialCoordinate {
     /// - Parameters:
     ///   - coord: horizontal coordinate
     ///   - info: location and time information about the observer
-    public init(horizontalCoordinate coord: HorizontalCoordinate, observerInfo info: ObserverLocationTime) {
+    init(horizontalCoordinate coord: HorizontalCoordinate, observerInfo info: ObserverLocationTime) {
         let latitude = DegreeAngle(info.location.coordinate.latitude)
         let sinDec = sin(coord.altitude) * sin(latitude) + cos(coord.altitude) * cos(latitude) * cos(coord.azimuth)
         let dec = DegreeAngle(radianAngle: RadianAngle(asin(sinDec)))
