@@ -98,9 +98,9 @@ struct GreekLetter: CustomStringConvertible {
     static func at(index: Int) -> String {
         // eliminate out-of-bound error
         _ = greekAlphabetEnglish[index]
-        var rawValue = UnicodeScalar("α")!.value + UInt32(index)
+        var rawValue = UnicodeScalar("α").value + UInt32(index)
         // offset duplicate sigmas
-        if rawValue >= UnicodeScalar("ς")!.value {
+        if rawValue >= UnicodeScalar("ς").value {
             rawValue += 1
         }
         let character = Character(UnicodeScalar(rawValue)!)

@@ -29,6 +29,6 @@ class BayerFlamsteedTest: XCTestCase {
     }
 
     func testAllBayerFlamsteedConversions() {
-        Star.magitudeLessThan(7).flatMap { $0.identity.rawBfDesignation }.forEach { _ = BayerFlamsteed($0) }
+        Star.magitudeLessThan(7).compactMap { $0.identity.rawBfDesignation }.forEach { _ = BayerFlamsteed($0) }
     }
 }
